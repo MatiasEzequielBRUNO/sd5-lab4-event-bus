@@ -1,0 +1,27 @@
+{
+  "name": "sd5-lab4-event-bus",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Basic Message Broker and Event Bus flow with RabbitMQ (SD5 - Lab 4, individual activity)",
+  "type": "commonjs",
+  "scripts": {
+    "produce": "tsx src/producer.ts",
+    "consumer:processor": "tsx src/consumers/processor.ts",
+    "consumer:notifier": "tsx src/consumers/notifier.ts",
+    "consumer:audit": "tsx src/consumers/audit.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.9",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.8",
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
